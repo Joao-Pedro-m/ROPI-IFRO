@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,ListView
+from exemplo.models import Administradores
 
-# Create your views here.
+class AdminList(ListView):
+    model = Administradores
+    queryset = Administradores.objects.all()

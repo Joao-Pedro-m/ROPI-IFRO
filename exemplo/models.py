@@ -24,8 +24,8 @@ class Ano(models.Model):
 class Administradores(models.Model):
     id = models.AutoField()
     nome = models.CharField(max_length=45)
-    matricula_API = models.BigIntegerField()
-    senha_API = models.CharField(max_length=45)
+    matricula_API = models.BigIntegerField(blank=True,null=True)
+    senha_API = models.CharField(max_length=45,blank=True,null=True)
     
     def __str__(self):
         return self.nome
