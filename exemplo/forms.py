@@ -1,7 +1,7 @@
 from django import forms
-from exemplo.models import Administradores
+from exemplo.models import ProjetosIntegradores
 
-class AdministradoresForm(forms.ModelForm):
+class ProjetosIntegradoresForm(forms.ModelForm):
     class Meta:
-        model = Administradores
+        model = ProjetosIntegradores
         fields = '__all__'
