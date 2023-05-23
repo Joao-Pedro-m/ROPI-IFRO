@@ -10,7 +10,6 @@ class ProjetosIntegradores(models.Model):
     Curso_idCurso = models.IntegerField()
     Ano_idAno = models.IntegerField()
     
-    
 class Cursos(models.Model):
     tipo_curso = models.CharField(max_length=45)
     
