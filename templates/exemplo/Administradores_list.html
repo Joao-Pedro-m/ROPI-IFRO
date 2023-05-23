@@ -1,1 +1,19 @@
-OI
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de administradores</title>
+</head>
+<body>
+<h1>Lista de administradores</h1>
+<input type="submit" onclick="location.href = '{% url 'exemplo:create'%}'" value="Adicionar novo administrador">
+<ul>
+    {% for administradores in object_list%}
+    <li>{{ administradores.nome }} - <a href="{% url 'exemplo:update' pk=administradores.id %}">Editar</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>

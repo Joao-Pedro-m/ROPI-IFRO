@@ -4,5 +4,7 @@ from exemplo import views
 app_name = 'exemplo'
 
 urlpatterns = [
-    path('',views.AdminList.as_view(), name=app_name)
+    path('',views.AdministradoresList.as_view(), name='list'),
+    path('create/',views.AdministradoresCreate.as_view(), name='create'),
+    path('update/<int:pk>/',views.AdministradoresUpdate.as_view(), name='update')
 ]
