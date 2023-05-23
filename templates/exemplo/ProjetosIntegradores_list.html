@@ -2,18 +2,21 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lista de Projetos Integradores</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 </head>
 <body>
-<h1>Lista de Projetos Integradores</h1>
-<input type="submit" onclick="location.href = '{% url 'exemplo:create'%}'" value="Adicionar novo Projetos Integradores">
-<ul>
-    {% for ProjetosIntegradores in object_list%}
-    <li>{{ ProjetosIntegradores.titulo }} - <a href="{% url 'exemplo:update' pk=ProjetosIntegradores.id %}">Editar</a></li>
-    {% endfor %}
-</ul>
+    <div class="container p-5 my-5 bg-dark text-white">
+        <h1>Lista de Projetos Integradores</h1>
+        <input type="submit" class="btn btn-primary" onclick="location.href = '{% url 'exemplo:create'%}'" value="Adicionar novo Projetos Integradores">
+        <ul>
+            {% for ProjetosIntegradores in object_list%}
+            <li>{{ ProjetosIntegradores.titulo }} - <a href="{% url 'exemplo:update' pk=ProjetosIntegradores.id %}">Editar</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
