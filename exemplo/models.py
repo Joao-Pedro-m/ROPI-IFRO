@@ -6,7 +6,7 @@ class ProjetosIntegradores(models.Model):
     periodo_final = models.DateField()
     resumo = models.CharField(max_length=250)
     resultados = models.CharField(max_length=150)
-    imagem = models.BinaryField()
+    imagem = models.FileField(upload_to='static', null=True, blank=True) 
     Curso_idCurso = models.IntegerField()
     Ano_idAno = models.IntegerField()
     

@@ -6,5 +6,6 @@ app_name = 'exemplo'
 urlpatterns = [
     path('',views.ProjetosIntegradoresList.as_view(), name='list'),
     path('create/',views.ProjetosIntegradoresCreate.as_view(), name='create'),
-    path('update/<int:pk>/',views.ProjetosIntegradoresUpdate.as_view(), name='update')
+    path('update/<int:pk>/',views.ProjetosIntegradoresUpdate.as_view(), name='update'),
+    path('detail/<int:pk>/',views.ProjetosIntegradoresDetail.as_view(), name='detail')
 ]

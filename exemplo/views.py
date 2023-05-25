@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DetailView
 from exemplo.models import ProjetosIntegradores
 
 class ProjetosIntegradoresList(ListView):
@@ -18,3 +18,5 @@ class ProjetosIntegradoresUpdate(UpdateView):
     fields = '__all__'
     success_url = reverse_lazy('exemplo:list')
 
+class ProjetosIntegradoresDetail(DetailView):
+    model = ProjetosIntegradores
