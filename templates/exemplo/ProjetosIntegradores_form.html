@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastrar Projetos Integradores</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+  <body>
+    <div class="container-fluid p-5 bg-dark text-white">
+      <div class="container p-5 bg-blue text-white">
+      <h1>Cadastrar Projetos Integradores</h1>
+      <form method="post" action=".">
+        {% csrf_token %}
+        {% bootstrap_form form %}     
+        <div class="btn-group d-flex justify-content-around">
+          <div>
+            <input type="submit" class="btn btn-primary " value="Salvar">
+          </div>
+          <div>
+            <input type="reset" class="btn btn-primary " value="Cancelar" onclick="location.href = '{% url 'exemplo:list' %}'">
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+bootstrap
+crispy forms
+
+painel de administracao
+usuario: admin
+senha: admin123

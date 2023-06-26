@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de Projetos Integradores</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="container-fluid p-5 bg-dark text-white">
+        <h1>Lista de Projetos Integradores</h1>
+        <input type="submit" class="btn btn-primary" onclick="location.href = '{% url 'exemplo:create'%}'" value="Adicionar novo Projetos Integradores">
+        <ul>
+            {% for ProjetosIntegradores in object_list%}
+            <li>
+                {{ ProjetosIntegradores.titulo }}
+                - <a href="{% url 'exemplo:update' pk=ProjetosIntegradores.id %}">Editar</a>
+                - <a href="{% url 'exemplo:detail' pk=ProjetosIntegradores.id %}">Detalhes</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
