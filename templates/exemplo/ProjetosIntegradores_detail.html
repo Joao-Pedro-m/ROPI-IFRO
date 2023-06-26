@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastrar Projetos Integradores</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+  <body>
+    <div class="container-fluid p-5 bg-dark text-white">
+      <div class="container p-5 bg-blue text-white">
+      <h1>{{ object.titulo }}</h1>
+      <img src="{{object.imagem}}" >
+    </div>
+  </body>
+</html>
