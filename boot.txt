@@ -4,3 +4,5 @@ crispy forms
 painel de administracao
 usuario: admin
 senha: admin123
+
+https://color.adobe.com/pt/create/color-wheel
