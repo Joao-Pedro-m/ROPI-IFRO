@@ -1,11 +1,9 @@
 from django.db import models
 
-
-    
 class Cursos(models.Model):
     tipo_curso = models.CharField(max_length=45)
-
-
+    def __str__(self):
+        return self.tipo_curso
 
 
 
@@ -16,7 +14,6 @@ class ProjetosIntegradores(models.Model):
     resumo = models.CharField(max_length=250)
     resultados = models.CharField(max_length=150)
     Curso_idCurso = models.ForeignKey(Cursos,default='', on_delete=models.CASCADE)
-
 
 
 class Imagem(models.Model):

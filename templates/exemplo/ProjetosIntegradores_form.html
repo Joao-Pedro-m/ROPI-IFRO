@@ -14,7 +14,8 @@
       <h1>Cadastrar Projetos Integradores</h1>
       <form method="post" action=".">
         {% csrf_token %}
-        {% bootstrap_form form %}     
+        {% bootstrap_form form %}    
+        <input type="file" name="images" multiple>
         <div class="btn-group d-flex justify-content-around">
           <div>
             <input type="submit" class="btn btn-primary " value="Salvar">

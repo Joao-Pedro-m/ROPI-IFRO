@@ -28,5 +28,3 @@ def upload(request):
         images = request.FILES.getlist('images')
         for image in images:
             Imagem.objects.create(Imagem=image)
-    images = Imagem.objects.all()
-    return render(request, 'index.html', {'images': images})
